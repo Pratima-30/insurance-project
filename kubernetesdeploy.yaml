@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: insurance-eta-deploy
-        image: pratima30/insurance-eta-app
+        image: pratima30/insurance-eta-deploy
         ports:
         - containerPort: 8082
 ---
@@ -25,10 +25,10 @@ kind: Service
 metadata:
   name: insurance-eta-np-service
   labels:
-    app: insurance-eta-app
+    app: insurance-eta-deploy
 spec:
   selector:
-    app: insurance-eta-app
+    app: insurance-eta-deploy
 
   type: NodePort
   ports:
