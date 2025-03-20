@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: insurance-eta-deploy
+  name: insurance-eta-app
   labels:
-    app: insurance-eta-deploy
+    app: insurance-eta-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: insurance-eta-deploy
+      app: insurance-eta-app
   template:
     metadata:
       labels:
-        app: insurance-eta-deploy
+        app:insurance-eta-app
     spec:
       containers:
-      - name: insurance-eta-deploy
-        image: pratima30/insurance-eta-deploy
+      - name: insurance-eta-container
+        image: pratima30/insurance-eta-app
         ports:
         - containerPort: 8082
 ---
@@ -25,10 +25,10 @@ kind: Service
 metadata:
   name: insurance-eta-np-service
   labels:
-    app: insurance-eta-deploy
+    app: insurance-eta-app
 spec:
   selector:
-    app: insurance-eta-deploy
+    app: insurance-eta-app
 
   type: NodePort
   ports:
