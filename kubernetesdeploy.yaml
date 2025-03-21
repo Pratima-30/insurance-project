@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app:insurance-eta-app
+        app: insurance-eta-app
     spec:
       containers:
       - name: insurance-eta-container
