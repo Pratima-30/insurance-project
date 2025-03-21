@@ -35,7 +35,7 @@ pipeline {
 		}
 		stage('Publish_to_Docker_Registry') {
 			steps {
-				sh "docker push pratima30/insurance-eta-app:latest"
+				sh "docker push pratima30/insurance-eta-app"
 			}
 		}
         stage('Deploy to Kubernetes Cluster') {
@@ -48,10 +48,6 @@ pipeline {
     }
 }
         
-        
-    
-
-
 
 
 
