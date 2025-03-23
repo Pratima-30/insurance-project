@@ -9,8 +9,7 @@ pipeline {
         stage('SCM_Checkout') {
             steps {
                echo "Perform SCM Checkout"
-			   //git 'https://github.com/Pratima-30/BankingApp.git'
-               git 'https://github.com/Pratima-30/insurance-project.git'
+	       git 'https://github.com/Pratima-30/insurance-project.git'
 	 }
         }
         stage('Application Build') {
